@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geotype React Integration</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    
+    #root {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- 
+    In a real React application, you would have a build process using 
+    webpack, Vite, Create React App, or similar tools.
+    
+    This is a simplified example for demonstration purposes.
+    
+    To use this example in a real project:
+    
+    1. Install required packages:
+       npm install react react-dom geotype
+       
+    2. Import the GoogleMap component and use it in your React application
+    
+    3. Bundle your application with your preferred build tool
+  -->
+  
+  <!-- React and ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <!-- Geotype Library -->
+  <script src="../../dist/geotype.js"></script>
+  
+  <!-- Babel for JSX transformation (for demo only) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Our React components (transformed by Babel) -->
+  <script type="text/babel" src="./GoogleMap.tsx"></script>
+  <script type="text/babel" src="./App.tsx"></script>
+  <script type="text/babel" src="./index.tsx"></script>
+  
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+</body>
+</html>

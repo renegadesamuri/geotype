@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript Google Maps Integration</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    h1 {
+      margin: 0;
+      color: #343a40;
+    }
+    
+    .search-container {
+      display: flex;
+      margin-top: 15px;
+    }
+    
+    #search-input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ced4da;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    #search-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4285F4;
+      color: white;
+      border: 1px solid #4285F4;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    
+    #search-button:hover {
+      background-color: #3367D6;
+    }
+    
+    main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #map {
+      flex: 1;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .instructions {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    code {
+      font-family: monospace;
+      background-color: #f1f3f5;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    
+    footer {
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #6c757d;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TypeScript Google Maps Integration</h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter a location (e.g., New York, Tokyo, Paris)">
+        <button id="search-button">Search</button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="instructions">
+        <p>This example demonstrates using the <code>GoogleMapsService</code> in a TypeScript application. Key features:</p>
+        <ul>
+          <li>Fully typed interface with TypeScript</li>
+          <li>Geocoding addresses to coordinates</li>
+          <li>Adding markers to the map</li>
+          <li>Proper error handling</li>
+        </ul>
+        <p>Try entering a location in the search box above to see it in action.</p>
+      </div>
+      
+      <div id="map"></div>
+    </main>
+    
+    <footer>
+      TypeScript Google Maps Integration Example
+    </footer>
+  </div>
+  
+  <!-- In a real application, this would be your bundled TypeScript code -->
+  <script>
+    // Simulated initialization of the TypeScript app
+    document.addEventListener('DOMContentLoaded', () => {
+      // Note: In a real application, this would be replaced by
+      // the bundled TypeScript code from map-app.ts
+      
+      alert('To use this demo, you need to:\n\n1. Replace "YOUR_GOOGLE_MAPS_API_KEY" in the code with your actual API key\n2. Compile the TypeScript to JavaScript using a bundler like webpack or Parcel\n\nThis HTML file is just a template for the UI.');
+    });
+  </script>
+</body>
+</html>

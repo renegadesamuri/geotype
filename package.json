@@ -1,0 +1,86 @@
+{
+  "name": "@renegadesamuri/geotype",
+  "version": "1.0.0",
+  "description": "A modern, TypeScript-first Google Maps API integration for JavaScript applications",
+  "main": "dist/geotype.js",
+  "module": "dist/geotype.esm.js",
+  "types": "dist/geotype.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:minify",
+    "build:minify": "terser dist/geotype.js -o dist/geotype.min.js --compress --mangle",
+    "watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "./scripts/prepare-publish.sh",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "demo:basic": "cd examples/basic-map && open index.html",
+    "demo:ts": "cd examples/typescript-integration && open index.html",
+    "demo:react": "cd examples/react-integration && open index.html",
+    "publish:check": "npm pack --dry-run",
+    "publish:beta": "npm publish --tag beta --access public",
+    "publish:public": "npm publish --access public",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "keywords": [
+    "google-maps",
+    "maps",
+    "typescript",
+    "javascript",
+    "geocoding",
+    "places",
+    "directions",
+    "geotype",
+    "geolocation",
+    "mapping",
+    "maps-api",
+    "google-maps-api",
+    "react-maps",
+    "typescript-maps",
+    "location-services"
+  ],
+  "author": "renegadesamuri",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google.maps": "^3.52.5",
+    "@types/jest": "^29.5.3",
+    "typescript": "^5.0.4",
+    "rimraf": "^5.0.1",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "terser": "^5.19.2"
+  },
+  "peerDependencies": {
+    "@types/google.maps": "^3.52.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renegadesamuri/geotype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/renegadesamuri/geotype/issues"
+  },
+  "homepage": "https://github.com/renegadesamuri/geotype#readme",
+  "files": [
+    "dist",
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
